@@ -37,6 +37,10 @@ app.post('/upload', upload.single('fileName'), async (req, res) => {
   }
 });
 
+app.use('*', (req, res) => {
+  res.status(200).send('<h1>This Is Express Server</h1>');
+});
+
 app.listen(5000, (req, res) => {
   console.log('Server Is Ruuning');
 });
