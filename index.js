@@ -8,7 +8,7 @@ const cloudinary = require('./utils/cloudinaryUtils');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './'); // Directory to store uploaded files
+    cb(null, 'tmp/'); // Directory to store uploaded files
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname); // Use original file name
